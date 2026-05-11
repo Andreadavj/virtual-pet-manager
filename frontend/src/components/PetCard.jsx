@@ -8,12 +8,25 @@ function PetCard({ pet, onDelete }) {
     'Tortuga': '🐢', 'Otro': '🐾'
   };
 
-  const defaultImage = `https://placehold.co/400x300/667eea/white?text=${encodeURIComponent(pet.species)}`;
+  // Paleta de macarrones vibrantes
+  const colorPalette = {
+    'Perro': '#a8e6cf',      // Verde menta
+    'Gato': '#5f27cd',       // Púrpura
+    'Conejo': '#ff6b81',     // Coral/rosa
+    'Pájaro': '#feca57',     // Amarillo
+    'Pez': '#98d9e1',        // Turquesa
+    'Hamster': '#a8e6cf',    // Verde menta
+    'Tortuga': '#5f27cd',    // Púrpura
+    'Otro': '#ff6b81'        // Coral/rosa
+  };
+
+  const petColor = colorPalette[pet.species] || '#a8e6cf';
+  const defaultImage = `https://placehold.co/400x300/${petColor.slice(1)}/white?text=${encodeURIComponent(pet.species)}`;
 
   return (
-    <div className="pet-card card h-100">
+    <div className="pet-card card h-100" style={{ borderTop: `4px solid ${petColor}` }}>
       {/* Imagen con overflow hidden para el zoom en hover */}
-      <div className="pet-image-wrapper">
+      <div className="pet-image-wrapper" style={{ background: `${petColor}20` }}>
         <img
           src={pet.image || defaultImage}
           className="card-img-top w-100 h-100"
@@ -58,18 +71,21 @@ function PetCard({ pet, onDelete }) {
         <div className="d-flex gap-2 mt-auto pt-3">
           <Link
             to={`/mascotas/${pet._id}`}
-            className="btn btn-outline-primary btn-sm flex-grow-1"
+            className="btn btn-sm flex-grow-1 fw-semibold"
+            style={{ background: `${petColor}30`, color: petColor, border: `2px solid ${petColor}` }}
           >
             Ver detalles
           </Link>
           <Link
             to={`/editar-mascota/${pet._id}`}
-            className="btn btn-outline-warning btn-sm"
+            className="btn btn-sm fw-semibold"
+            style={{ background: `${petColor}30`, color: petColor, border: `2px solid ${petColor}` }}
           >
             ✏️
           </Link>
           <button
-            className="btn btn-outline-danger btn-sm"
+            className="btn btn-sm fw-semibold"
+            style={{ background: `${petColor}30`, color: petColor, border: `2px solid ${petColor}` }}
             onClick={() => onDelete && onDelete(pet)}
           >
             🗑️
