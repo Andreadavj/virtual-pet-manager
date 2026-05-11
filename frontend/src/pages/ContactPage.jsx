@@ -214,7 +214,7 @@ function ContactPage() {
                     className="btn btn-primary btn-lg fw-bold"
                     style={{
                       borderRadius: '0.5rem',
-                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      background: 'linear-gradient(135deg, #7a422f 0%, #463124 100%)',
                       border: 'none',
                       padding: '0.75rem',
                     }}

@@ -126,7 +126,7 @@ function PetsPage() {
   return (
     <div>
       {/* Header */}
-      <div style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}
+      <div style={{ background: 'linear-gradient(135deg, #7a422f 0%, #463124 100%)' }}
            className="py-5 text-white mb-5">
         <div className="container py-3">
           <h1 className="display-5 fw-bold">🐾 Todas las Mascotas</h1>

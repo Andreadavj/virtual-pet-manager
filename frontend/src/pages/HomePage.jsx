@@ -125,7 +125,7 @@ function HomePage() {
 
       {/* ── Mascotas Destacadas ── */}
       {featuredPets.length > 0 && (
-        <section className="py-5" style={{ background: '#f8f9ff' }}>
+        <section className="py-5" style={{ background: '#dfcec7' }}>
           <div className="container">
             <div className="text-center mb-5">
               <h2 className="section-title">Mascotas Destacadas</h2>
@@ -179,7 +179,7 @@ function HomePage() {
       </section>
 
       {/* ── CTA Final ── */}
-      <section style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', padding: '5rem 0' }}>
+      <section style={{ background: 'linear-gradient(135deg, #7a422f 0%, #463124 100%)', padding: '5rem 0' }}>
         <div className="container text-center text-white">
           <h2 className="display-5 fw-bold mb-3">¿Listo para comenzar?</h2>
           <p className="lead opacity-75 mb-4">Registra tu primera mascota virtual hoy mismo</p>

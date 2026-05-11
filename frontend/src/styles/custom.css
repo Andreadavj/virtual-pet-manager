@@ -1,7 +1,7 @@
 /* custom.css — Estilos personalizados sobre Bootstrap */
 
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-gradient: linear-gradient(135deg, #7a422f 0%, #463124 100%);
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   --card-hover-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   --border-radius-lg: 16px;
@@ -11,8 +11,8 @@
 /* General */
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background-color: #f8f9ff;
-  color: #1a1a2e;
+  background-color: #dfcec7;
+  color: #463124;
 }
 
 /* Hero Section */
@@ -127,7 +127,7 @@ body {
   opacity: 0.9;
   transform: translateY(-1px);
   color: white;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(122, 66, 47, 0.4);
 }
 
 /* Forms */
@@ -140,8 +140,8 @@ body {
 }
 
 .form-control-modern:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+  border-color: #7a422f;
+  box-shadow: 0 0 0 3px rgba(122, 66, 47, 0.15);
 }
 
 /* Loading */

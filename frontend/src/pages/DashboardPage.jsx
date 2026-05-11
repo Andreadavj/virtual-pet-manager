@@ -34,10 +34,10 @@ function DashboardPage() {
   }, {});
 
   const statCards = [
-    { icon: '🐾', label: 'Total Mascotas', value: stats.total, color: '#667eea' },
-    { icon: '😄', label: 'Mascotas Felices', value: stats.happy, color: '#43b89c' },
-    { icon: '🦎', label: 'Especies Distintas', value: stats.species, color: '#f6a623' },
-    { icon: '⭐', label: 'Última Registrada', value: stats.newest, color: '#e25c6a', small: true },
+    { icon: '🐾', label: 'Total Mascotas', value: stats.total, color: '#7a422f' },
+    { icon: '😄', label: 'Mascotas Felices', value: stats.happy, color: '#b87d20' },
+    { icon: '🦎', label: 'Especies Distintas', value: stats.species, color: '#bc9276' },
+    { icon: '⭐', label: 'Última Registrada', value: stats.newest, color: '#463124', small: true },
   ];
 
   if (loading) return <LoadingSpinner message="Cargando dashboard..." />;
@@ -98,7 +98,7 @@ function DashboardPage() {
                         className="progress-bar"
                         style={{
                           width: `${(count / pets.length) * 100}%`,
-                          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                          background: 'linear-gradient(135deg, #7a422f 0%, #463124 100%)',
                           borderRadius: '4px'
                         }}
                       />
