@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './App.jsx';
 
 // Bootstrap CSS — importar aquí afecta toda la app
@@ -13,9 +13,9 @@ import './styles/custom.css';
 // y "monta" toda la aplicación React dentro de él
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* BrowserRouter habilita React Router — permite navegación SPA */}
-    <BrowserRouter>
+    {/* HashRouter usa URLs con # (ej: /#/mascotas) — perfectamente compatible con GitHub Pages */}
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );

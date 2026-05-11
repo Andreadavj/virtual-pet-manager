@@ -6,8 +6,44 @@ import PetCard from '../components/PetCard';
 function HomePage() {
   const [featuredPets, setFeaturedPets] = useState([]);
 
+  // Mascotas de demostración si no hay backend disponible
+  const demoPets = [
+    {
+      _id: '1',
+      name: '🐕 Max',
+      species: 'Perro',
+      mood: 'Feliz',
+      energy: 85,
+      hunger: 30,
+      image: 'https://images.unsplash.com/photo-1633722715463-d30628cfffb0?w=300&h=300&fit=crop'
+    },
+    {
+      _id: '2',
+      name: '🐈 Luna',
+      species: 'Gato',
+      mood: 'Tranquilo',
+      energy: 45,
+      hunger: 60,
+      image: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300&h=300&fit=crop'
+    },
+    {
+      _id: '3',
+      name: '🐰 Fluffy',
+      species: 'Conejo',
+      mood: 'Juguetón',
+      energy: 70,
+      hunger: 50,
+      image: 'https://images.unsplash.com/photo-1585110396000-c9fbe2022579?w=300&h=300&fit=crop'
+    }
+  ];
+
   useEffect(() => {
-    fetchAllPets().then(res => setFeaturedPets(res.data.slice(0, 3))).catch(() => {});
+    fetchAllPets()
+      .then(res => setFeaturedPets(res.data.slice(0, 3)))
+      .catch(() => {
+        // Si no hay backend, usar mascotas de demostración
+        setFeaturedPets(demoPets);
+      });
   }, []);
 
   return (

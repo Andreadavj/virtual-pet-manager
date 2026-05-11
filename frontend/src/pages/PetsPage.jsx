@@ -9,6 +9,60 @@ import { fetchAllPets, deletePet } from '../services/petService';
 const SPECIES_OPTIONS = ['Todos', 'Perro', 'Gato', 'Conejo', 'Pájaro', 'Pez', 'Hamster', 'Tortuga', 'Otro'];
 const MOOD_OPTIONS = ['Todos', 'Feliz', 'Triste', 'Emocionado', 'Hambriento', 'Cansado', 'Juguetón', 'Enojado'];
 
+// Mascotas de demostración para GitHub Pages
+const DEMO_PETS = [
+  {
+    _id: '1',
+    name: '🐕 Max',
+    species: 'Perro',
+    mood: 'Feliz',
+    energy: 85,
+    hunger: 30,
+    age: 3,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '2',
+    name: '🐈 Luna',
+    species: 'Gato',
+    mood: 'Tranquilo',
+    energy: 45,
+    hunger: 60,
+    age: 2,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '3',
+    name: '🐰 Fluffy',
+    species: 'Conejo',
+    mood: 'Juguetón',
+    energy: 70,
+    hunger: 50,
+    age: 1,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '4',
+    name: '🦜 Tweety',
+    species: 'Pájaro',
+    mood: 'Emocionado',
+    energy: 90,
+    hunger: 40,
+    age: 2,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '5',
+    name: '🐠 Nemo',
+    species: 'Pez',
+    mood: 'Tranquilo',
+    energy: 50,
+    hunger: 55,
+    age: 1,
+    createdAt: new Date().toISOString(),
+  },
+];
+
 function PetsPage() {
   // Estado principal
   const [pets, setPets] = useState([]);
@@ -36,8 +90,11 @@ function PetsPage() {
       const response = await fetchAllPets();
       setPets(response.data);
     } catch (err) {
-      setError('Error al cargar las mascotas. Verifica que el servidor esté activo.');
-      console.error(err);
+      console.error('Backend no disponible, usando mascotas de demostración:', err);
+      // Si no hay backend (ej: en GitHub Pages), mostrar mascotas de demostración
+      setPets(DEMO_PETS);
+      // NO mostrar error si logramos cargar las mascotas de demostración
+      setError(null);
     } finally {
       setLoading(false);
     }
