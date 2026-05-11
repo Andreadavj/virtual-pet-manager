@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirect</title>
+    <script type="text/javascript">
+      // Redirige todas las rutas 404 al index.html manteniendo la ruta
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/virtual-pet-manager/?p=' + l.pathname.slice(0, l.pathname.lastIndexOf('/') + 1).slice(pathSegmentsToKeep) + l.search +
+        (l.hash || '')
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
