@@ -92,7 +92,8 @@ function Footer() {
         <div className="row align-items-center">
           <div className="col-md-6 text-center text-md-start" style={{ opacity: 0.7, fontSize: '0.95rem' }}>
             <p className="mb-0">
-              © {currentYear} PetManager. Todos los derechos reservados. ✨
+              © {currentYear} PetManager. Todos los derechos reservados. ✨<br/>
+              <span style={{ fontSize: '0.85rem', opacity: 0.85 }}>Hecho por Doris Andrea Valverde Jara</span>
             </p>
           </div>
           <div className="col-md-6 text-center text-md-end" style={{ opacity: 0.7 }}>
